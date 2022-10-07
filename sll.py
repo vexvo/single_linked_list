@@ -108,4 +108,4 @@ class SingleLinedList:
         if search_node != None:
             search_node.value = value
         else:
-            print('Index fuera de rango') 
+            print('Index fuera de rango')
