@@ -1,7 +1,7 @@
 from re import search
 
 
-class SingleLinedList:
+class SingleLinkedList:
 
     ''' Creación de la clase anidada en SingleLinkedList '''
     class Node:
@@ -16,7 +16,7 @@ class SingleLinedList:
         self.length = 0
 
     ''' Método que imprime el contenido de la lista simplemente enlazada '''
-    def print(self):
+    def print_values(self):
         print_sll = []
         current_node = self.head
         while current_node != None:
@@ -108,4 +108,20 @@ class SingleLinedList:
         if search_node != None:
             search_node.value = value
         else:
-            print('Index fuera de rango')
+            print('Index fuera de rango') 
+            
+    ''' Método que inserta un valor en la posición dada'''
+    def insert(self, index, value):
+        if self.length > 0 and index < self.length:
+            if index == 0:
+                self.appbegin(value)
+            elif index == self.length:
+                self.append(value)
+            else:
+                new_node = self.Node(value)
+                new_node.next = self.get_node(index)
+                previous_node = self.get_node(index - 1)
+                previous_node.next =  new_node
+                self.length += 1
+        else:
+           print('Index fuera de rango')
