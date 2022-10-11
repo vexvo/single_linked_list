@@ -8,3 +8,6 @@ linked_list.appbegin('B')
 linked_list.print_values()
 linked_list.insert(1, 'C')
 linked_list.print_values()
+linked_list.reverse()
+linked_list.print_values()
+

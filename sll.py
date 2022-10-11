@@ -125,3 +125,9 @@ class SingleLinkedList:
                 self.length += 1
         else:
            print('Index fuera de rango')
+
+    ''' Método que hace que se invierta la lista'''
+    def reverse(self):
+        for i in range(0, self.length - 1):
+            self.insert(i, self.tail.value)
+            self.pop()
