@@ -109,7 +109,7 @@ class SingleLinkedList:
             search_node.value = value
         else:
             print('Index fuera de rango') 
-
+            
     ''' Método que inserta un valor en la posición dada'''
     def insert(self, index, value):
         if self.length > 0 and index < self.length:
@@ -124,4 +124,4 @@ class SingleLinkedList:
                 previous_node.next =  new_node
                 self.length += 1
         else:
-            print('Index fuera de rango')
+           print('Index fuera de rango')
